@@ -9,7 +9,7 @@ The function requires **two parameters**:
 ## getAshivaModuleManifest Function:
 
 ```
-function getModuleManifest($Module, $Publisher) {
+function getAshivaModuleManifest($Module, $Publisher) {
 
   $moduleManifestPath = $_SERVER['DOCUMENT_ROOT'].'/.assets/modules/'.url($Publisher).'/'.url($Module).'/'.url($Module).'.php';
   $moduleManifest = file_get_contents($moduleManifestPath);
