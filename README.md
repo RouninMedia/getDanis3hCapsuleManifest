@@ -1,21 +1,21 @@
-# getAshivaModuleManifest
-`getAshivaModuleManifest()` is a PHP function which requests and returns an ashivaModule Manifest.
+# getDanis3hCapsuleManifest
+`getDanis3hCapsuleManifest()` is a PHP function which requests and returns a Danis3h Capsule Manifest.
 
 The function requires **two parameters**:
 
  - `$Module`
  - `$Publisher`
 
-## getAshivaModuleManifest Function:
+## getDanis3hCapsuleManifest Function:
 
 ```
-function getAshivaModuleManifest($Module, $Publisher) {
+function getDanis3hCapsuleManifest($Capsule, $Publisher) {
 
-  $moduleManifestPath = $_SERVER['DOCUMENT_ROOT'].'/.assets/modules/'.url($Publisher).'/'.url($Module).'/'.url($Module).'.php';
-  $moduleManifest = file_get_contents($moduleManifestPath);
-  $moduleManifest = str_replace('<?php', '', $moduleManifest);
-  $moduleManifest = str_replace('?>', '', $moduleManifest);
+  $capsuleManifestPath = $_SERVER['DOCUMENT_ROOT'].'/.assets/modules/'.url($Publisher).'/'.url($Capsule).'/'.url($Capsule).'.php';
+  $capsuleManifest = file_get_contents($capsuleManifestPath);
+  $capsuleManifest = str_replace('<?php', '', $capsuleManifest);
+  $capsuleManifest = str_replace('?>', '', $capsuleManifest);
 
-  return $moduleManifest;
+  return $capsuleManifest;
 }
 ```
